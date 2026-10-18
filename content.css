@@ -1,0 +1,31 @@
+#random-password-backspace-notice {
+  all: initial;
+  box-sizing: border-box !important;
+  position: fixed !important;
+  display: block !important;
+  width: max-content !important;
+  max-width: calc(100vw - 16px) !important;
+  padding: 6px 10px !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  border-radius: 7px !important;
+  background: #f8fafc !important;
+  color: #17202a !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16) !important;
+  font: 600 12px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif !important;
+  letter-spacing: 0 !important;
+  white-space: nowrap !important;
+  text-align: center !important;
+  direction: ltr !important;
+  pointer-events: none !important;
+  user-select: none !important;
+  z-index: 2147483647 !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  #random-password-backspace-notice {
+    border-color: rgba(255, 255, 255, 0.18) !important;
+    background: #27313d !important;
+    color: #f2f5f8 !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.38) !important;
+  }
+}

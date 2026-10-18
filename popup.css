@@ -1,0 +1,51 @@
+:root {
+  color-scheme: light dark;
+  font: 13px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  width: 280px;
+  margin: 0;
+  background: #f8fafc;
+  color: #17202a;
+}
+
+main { padding: 16px; }
+h1 { margin: 0 0 5px; font-size: 15px; line-height: 1.3; }
+.intro { margin: 0 0 14px; color: #52606d; }
+
+.switch-row, .duration-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 42px;
+  border-top: 1px solid #e0e6ed;
+}
+
+.switch-row input { width: 17px; height: 17px; margin: 0; accent-color: #255fc3; }
+.duration-row input {
+  width: 70px;
+  padding: 5px;
+  border: 1px solid #9ba8b5;
+  border-radius: 5px;
+  background: #fff;
+  color: #17202a;
+  font: inherit;
+  text-align: right;
+}
+.duration-control { display: flex; align-items: center; gap: 5px; }
+.save-status { min-height: 18px; margin: 8px 0 0; color: #2356a2; }
+.save-status.error { color: #b42318; }
+.note { margin: 8px 0 0; color: #52606d; font-size: 11px; }
+
+@media (prefers-color-scheme: dark) {
+  body { background: #202832; color: #f1f5f9; }
+  .intro, .note { color: #acb9c8; }
+  .switch-row, .duration-row { border-color: #3c4856; }
+  .duration-row input { background: #303b49; color: #f1f5f9; border-color: #657386; }
+  .save-status { color: #a8c7ff; }
+  .save-status.error { color: #ffb4ab; }
+}

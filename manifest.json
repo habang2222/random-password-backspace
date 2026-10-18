@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Random Password Backspace",
+  "version": "1.0.0",
+  "description": "비밀번호 입력창에서 Backspace 한 번에 1~3글자를 무작위로 삭제하는 보안 연구용 확장 프로그램",
+  "permissions": ["storage"],
+  "action": {
+    "default_title": "Random Password Backspace 설정",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "all_frames": true,
+      "match_about_blank": true,
+      "match_origin_as_fallback": true,
+      "run_at": "document_start",
+      "world": "ISOLATED"
+    }
+  ]
+}

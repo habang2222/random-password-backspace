@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Random Password Backspace 설정</title>
+  <link rel="stylesheet" href="popup.css">
+  <script src="popup.js" defer></script>
+</head>
+<body>
+  <main>
+    <h1>Random Password Backspace</h1>
+    <p class="intro">비밀번호 입력창의 백스페이스 삭제 수를 무작위로 바꿉니다.</p>
+
+    <label class="switch-row" for="enabled">
+      <span>기능 활성화</span>
+      <input id="enabled" type="checkbox">
+    </label>
+
+    <label class="switch-row" for="showNotice">
+      <span>삭제 개수 알림 표시</span>
+      <input id="showNotice" type="checkbox">
+    </label>
+
+    <label class="duration-row" for="noticeDuration">
+      <span>알림 표시 시간</span>
+      <span class="duration-control">
+        <input id="noticeDuration" type="number" min="300" max="5000" step="100" inputmode="numeric">
+        <span>ms</span>
+      </span>
+    </label>
+
+    <p id="saveStatus" class="save-status" role="status" aria-live="polite"></p>
+    <p class="note">화면에 표시된 삭제 개수는 화면 관찰자에게 노출될 수 있습니다. 보안 효과는 검증되지 않았습니다.</p>
+  </main>
+</body>
+</html>
